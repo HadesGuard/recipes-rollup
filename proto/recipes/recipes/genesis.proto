@@ -1,0 +1,12 @@
+syntax = "proto3";
+package recipes.recipes;
+
+import "gogoproto/gogo.proto";
+import "recipes/recipes/params.proto";
+
+option go_package = "recipes/x/recipes/types";
+
+// GenesisState defines the recipes module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}

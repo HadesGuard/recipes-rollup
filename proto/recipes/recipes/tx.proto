@@ -1,0 +1,7 @@
+syntax = "proto3";
+package recipes.recipes;
+
+option go_package = "recipes/x/recipes/types";
+
+// Msg defines the Msg service.
+service Msg {}
