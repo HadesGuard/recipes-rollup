@@ -1,7 +1,20 @@
 syntax = "proto3";
+
 package recipes.recipes;
 
 option go_package = "recipes/x/recipes/types";
 
 // Msg defines the Msg service.
-service Msg {}
+service Msg {
+  rpc CreateRecipe (MsgCreateRecipe) returns (MsgCreateRecipeResponse);
+}
+message MsgCreateRecipe {
+  string creator     = 1;
+  string dish        = 2;
+  string ingredients = 3;
+}
+
+message MsgCreateRecipeResponse {
+  uint64 id = 1;
+}
+

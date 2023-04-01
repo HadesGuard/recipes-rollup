@@ -12,6 +12,10 @@ const (
 
 	// MemStoreKey defines the in-memory store key
 	MemStoreKey = "mem_recipes"
+
+	// Keep track of the index of recipes
+	RecipeKey      = "Recipe-value-"
+	RecipeCountKey = "Recipe-count-"
 )
 
 func KeyPrefix(p string) []byte {
